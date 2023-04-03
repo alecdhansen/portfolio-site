@@ -70,7 +70,7 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
         ${c1}
       ) 1 10%;`}
               >
-                PWD's write up on the project
+                Purple Wren Digital's write up
               </Link>
             </Underline>
           </LinksContainer>
