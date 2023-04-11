@@ -11,27 +11,40 @@ import {
   ProjectHeader,
   CompanyTag,
   ProjectContainer,
+  ProjectHeaderText,
 } from "../style";
 import { TitleHeader, BlurbContainer } from "../style";
 import { HPSTech, ULTech, cargillTech, content, mobileContent } from "../utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ModalContainer, ModalImage } from "./style";
+import image from "../../../assets/images/braggem.png";
 
 const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
   const mobile = window.innerWidth < 480;
   const contentVariant = mobile ? mobileContent : content;
-  const [hovered, setHovered] = useState<boolean>(false);
+  const [hovered1, setHovered1] = useState<boolean>(false);
+  const [hovered2, setHovered2] = useState<boolean>(false);
+  const [hovered3, setHovered3] = useState<boolean>(false);
 
-  // const handleCloseModal = () => {
-  //   setSelectedImage(null);
-  // };
+  const handleCloseModal = () => {
+    setHovered1(false);
+  };
 
-  // const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
-  //   if (e.target === e.currentTarget) {
-  //     handleCloseModal();
-  //   }
-  // };
+  const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      handleCloseModal();
+      setHovered1(false);
+    }
+  };
 
-  console.log({ hovered });
+  useEffect(() => {
+    console.log({ hovered1 });
+    hovered1 ? (document.body.style.position = "fixed") : "initial";
+    hovered1 ? (document.body.style.top = `-${window.scrollY}px`) : "0px";
+    !hovered1 ? (document.body.style.position = "initial") : "fixed";
+    !hovered1 ? (document.body.style.top = "0px") : `-${window.scrollY}px`;
+  }, [hovered1]);
+
   return (
     <Container
       variants={contentVariant}
@@ -50,8 +63,24 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
     ) 1 100%;`}
       >
         <ProjectContainer>
-          <ProjectHeader onMouseOver={(e) => setHovered(true)}>
-            React Native Application
+          <ModalContainer
+            onClick={handleOutsideClick}
+            className={hovered1 ? "visible" : "hidden"}
+          >
+            {hovered1 && (
+              <ModalImage
+                src={image}
+                alt="Modal Image"
+                loading="lazy"
+                onClick={handleCloseModal}
+                className={hovered1 ? "visible" : "hidden"}
+              />
+            )}
+          </ModalContainer>
+          <ProjectHeader>
+            <ProjectHeaderText onMouseOver={() => setHovered1(true)}>
+              React Native Application
+            </ProjectHeaderText>
           </ProjectHeader>
           <BlurbContainer>
             I worked with{" "}

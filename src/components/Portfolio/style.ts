@@ -16,9 +16,10 @@ export const Container = styled(motion.div)`
 export const TitleHeader = styled.h2<TitleProps>`
   font-size: ${({ fontSize }) => fontSize};
   margin: 0 0 50px 0;
-  pointer-events: none;
+  /* pointer-events: none; */
   flex-wrap: wrap;
   line-height: ${({ lineHeight }) => lineHeight};
+  cursor: pointer;
   @media (min-width: 401px) and (max-width: 800px) {
     width: 12vw;
     line-height: ${({ lineHeight }) => lineHeight};
@@ -105,9 +106,12 @@ export const Link = styled.a<LinkProps>`
 
 export const ProjectContainer = styled.div``;
 
-export const ProjectHeader = styled.h2`
+export const ProjectHeader = styled.div`
+  display: flex;
   padding: 0 0 0 30px;
 `;
+
+export const ProjectHeaderText = styled.h2``;
 
 export const CompanyTag = styled.a`
   text-decoration: Underline;
