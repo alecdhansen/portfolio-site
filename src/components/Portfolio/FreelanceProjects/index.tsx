@@ -14,10 +14,24 @@ import {
 } from "../style";
 import { TitleHeader, BlurbContainer } from "../style";
 import { HPSTech, ULTech, cargillTech, content, mobileContent } from "../utils";
+import { useState } from "react";
 
 const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
   const mobile = window.innerWidth < 480;
   const contentVariant = mobile ? mobileContent : content;
+  const [hovered, setHovered] = useState<boolean>(false);
+
+  // const handleCloseModal = () => {
+  //   setSelectedImage(null);
+  // };
+
+  // const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  //   if (e.target === e.currentTarget) {
+  //     handleCloseModal();
+  //   }
+  // };
+
+  console.log({ hovered });
   return (
     <Container
       variants={contentVariant}
@@ -36,7 +50,9 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
     ) 1 100%;`}
       >
         <ProjectContainer>
-          <ProjectHeader>React Native Application</ProjectHeader>
+          <ProjectHeader onMouseOver={(e) => setHovered(true)}>
+            React Native Application
+          </ProjectHeader>
           <BlurbContainer>
             I worked with{" "}
             <CompanyTag href="https://purplewrendigital.com/" target="_blank">
