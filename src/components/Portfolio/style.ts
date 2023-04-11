@@ -103,6 +103,8 @@ export const Link = styled.a<LinkProps>`
   }
 `;
 
+export const ProjectContainer = styled.div``;
+
 export const ProjectHeader = styled.h2`
   padding: 0 0 0 30px;
 `;

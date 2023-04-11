@@ -29,6 +29,8 @@ export const cargillTech = ["React Native", "TypeScript", "Expo"];
 
 export const ULTech = ["React", "TypeScript", "ViteJS"];
 
+export const HPSTech = ["React", "TypeScript", "ViteJS", "EmailJS"];
+
 export const content: Variants = {
   offscreen: {
     x: 100,

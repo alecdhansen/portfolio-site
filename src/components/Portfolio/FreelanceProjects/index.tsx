@@ -10,31 +10,32 @@ import {
   ContentContainer,
   ProjectHeader,
   CompanyTag,
+  ProjectContainer,
 } from "../style";
 import { TitleHeader, BlurbContainer } from "../style";
-import { ULTech, cargillTech, content, mobileContent } from "../utils";
+import { HPSTech, ULTech, cargillTech, content, mobileContent } from "../utils";
 
 const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
   const mobile = window.innerWidth < 480;
   const contentVariant = mobile ? mobileContent : content;
   return (
-    <motion.div
+    <Container
+      variants={contentVariant}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
     >
-      <Container variants={contentVariant}>
-        <TitleHeader fontSize="80px" lineHeight="4rem">
-          Freelance Projects
-        </TitleHeader>
+      <TitleHeader fontSize="80px" lineHeight="4rem">
+        Freelance Projects
+      </TitleHeader>
 
-        <ContentContainer
-          borderImage={`linear-gradient(
+      <ContentContainer
+        borderImage={`linear-gradient(
       to bottom, 
       ${c1}, 
       ${c2}
     ) 1 100%;`}
-        >
+      >
+        <ProjectContainer>
           <ProjectHeader>React Native Application</ProjectHeader>
           <BlurbContainer>
             I worked with{" "}
@@ -74,7 +75,9 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
               </Link>
             </Underline>
           </LinksContainer>
-          <div style={{ marginBlock: "50px" }} />
+        </ProjectContainer>
+        <div style={{ marginBlock: "50px" }} />
+        <ProjectContainer>
           <ProjectHeader>Universal Ledger</ProjectHeader>
           <BlurbContainer>
             I worked with a small design team and partner web developer to bring
@@ -107,9 +110,42 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
               </Link>
             </Underline>
           </LinksContainer>
-        </ContentContainer>
-      </Container>
-    </motion.div>
+        </ProjectContainer>
+        <div style={{ marginBlock: "50px" }} />
+        <ProjectContainer>
+          <ProjectHeader>Hansen Production Studios</ProjectHeader>
+          <BlurbContainer>
+            This was a solo project. I worked with the client to reimagine his
+            business website, and I think it was a huge success!
+          </BlurbContainer>
+          <TechnologiesContainer>
+            {HPSTech.map((tech: string, i: number) => (
+              <TechnologyIcon key={i}>{tech}</TechnologyIcon>
+            ))}
+          </TechnologiesContainer>
+          <LinksContainer>
+            <Underline>
+              <Link
+                // href="https://hps.netlify.app/"
+                target="_blank"
+                borderImage={`linear-gradient(
+        to left,
+        ${c1},
+        ${c2}
+      ) 1 10%;`}
+                hover={`linear-gradient(
+        to left,
+        ${c2},
+        ${c1}
+      ) 1 10%;`}
+              >
+                Launching soon!
+              </Link>
+            </Underline>
+          </LinksContainer>
+        </ProjectContainer>
+      </ContentContainer>
+    </Container>
   );
 };
 export default FreelanceProjects;
