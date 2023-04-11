@@ -90,7 +90,7 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
           <LinksContainer>
             <Underline>
               <Link
-                href="https://uled.netlify.app/"
+                // href="https://uled.netlify.app/"
                 target="_blank"
                 borderImage={`linear-gradient(
         to left,
@@ -103,7 +103,7 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
         ${c1}
       ) 1 10%;`}
               >
-                Universal Ledger
+                Launching soon!
               </Link>
             </Underline>
           </LinksContainer>
