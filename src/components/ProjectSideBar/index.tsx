@@ -17,7 +17,7 @@ const ProjectSideBar: React.FC<Props> = ({ focus, setFocus, c1, c2 }) => {
         left: 0,
         behavior: "smooth",
       });
-    position === 5 &&
+    position === 2 &&
       setTimeout(() => {
         window.scroll({
           top: 300,
@@ -64,12 +64,12 @@ const ProjectSideBar: React.FC<Props> = ({ focus, setFocus, c1, c2 }) => {
         ${c1}
       ) 1 10%;`}
             >
-              Braggem
+              Freelance Projects
             </Link>
           </Underline>
           <Underline
             transform={focus === 3 ? "scale(1.3)" : ""}
-            pLeft={focus === 3 ? "27px" : ""}
+            pLeft={focus === 3 ? "37px" : ""}
             mLeft={focus === 3 ? "7px" : ""}
             hPleft={focus === 3 ? "-10px" : "10px"}
           >
@@ -87,11 +87,11 @@ const ProjectSideBar: React.FC<Props> = ({ focus, setFocus, c1, c2 }) => {
         ${c1}
       ) 1 10%;`}
             >
-              Newspaper App
+              Braggem
             </Link>
           </Underline>
           <Underline
-            transform={focus === 4 ? "scale(1.3)" : ""}
+            transform={focus === 4 ? "scale(1.4)" : ""}
             pLeft={focus === 4 ? "27px" : ""}
             mLeft={focus === 4 ? "7px" : ""}
             hPleft={focus === 4 ? "-10px" : "10px"}
@@ -110,10 +110,9 @@ const ProjectSideBar: React.FC<Props> = ({ focus, setFocus, c1, c2 }) => {
         ${c1}
       ) 1 10%;`}
             >
-              Pixel Perfect
+              Newspaper App
             </Link>
           </Underline>
-
           <Underline
             transform={focus === 5 ? "scale(1.3)" : ""}
             pLeft={focus === 5 ? "27px" : ""}
@@ -134,9 +133,10 @@ const ProjectSideBar: React.FC<Props> = ({ focus, setFocus, c1, c2 }) => {
         ${c1}
       ) 1 10%;`}
             >
-              Freelance Projects
+              Pixel Perfect
             </Link>
           </Underline>
+
           <Underline pLeft="" hPleft="0px" hTransform="scale(1)">
             <Link
               cursor="default"

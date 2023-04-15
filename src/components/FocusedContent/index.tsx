@@ -12,17 +12,18 @@ const FocusedContent: React.FC<Props> = ({ focus, c1, c2 }) => {
     content = <AboutMe c1={c1} c2={c2} />;
   }
   if (focus === 2) {
-    content = <Braggem c1={c1} c2={c2} />;
-  }
-  if (focus === 3) {
-    content = <NewspaperApp c1={c1} c2={c2} />;
-  }
-  if (focus === 4) {
-    content = <PixelPerfect c1={c1} c2={c2} />;
-  }
-  if (focus === 5) {
     content = <FreelanceProjects c1={c1} c2={c2} />;
   }
+  if (focus === 3) {
+    content = <Braggem c1={c1} c2={c2} />;
+  }
+  if (focus === 4) {
+    content = <NewspaperApp c1={c1} c2={c2} />;
+  }
+  if (focus === 5) {
+    content = <PixelPerfect c1={c1} c2={c2} />;
+  }
+
   return <ContentContainer>{content}</ContentContainer>;
 };
 
