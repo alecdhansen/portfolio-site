@@ -51,7 +51,7 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
       >
         <ProjectContainer>
           <ProjectHeader onMouseOver={(e) => setHovered(true)}>
-            React Native Application
+            Agricultural Sales Application
           </ProjectHeader>
           <BlurbContainer>
             I worked with{" "}
@@ -156,6 +156,43 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
       ) 1 10%;`}
               >
                 Launching soon!
+              </Link>
+            </Underline>
+          </LinksContainer>
+        </ProjectContainer>
+        <div style={{ marginBlock: "50px" }} />
+        <ProjectContainer>
+          <ProjectHeader>Real Estate Application</ProjectHeader>
+          <BlurbContainer>
+            I'm currently working as a contractor for{" "}
+            <CompanyTag href="https://purplewrendigital.com/" target="_blank">
+              Purple Wren Digital
+            </CompanyTag>{" "}
+            on a mobile real estate application. I am running design and core
+            build out of Phase 1 of the project.
+          </BlurbContainer>
+          <TechnologiesContainer>
+            {cargillTech.map((tech: string, i: number) => (
+              <TechnologyIcon key={i}>{tech}</TechnologyIcon>
+            ))}
+          </TechnologiesContainer>
+          <LinksContainer>
+            <Underline>
+              <Link
+                // href="https://hps.netlify.app/"
+                target="_blank"
+                borderImage={`linear-gradient(
+        to left,
+        ${c1},
+        ${c2}
+      ) 1 10%;`}
+                hover={`linear-gradient(
+        to left,
+        ${c2},
+        ${c1}
+      ) 1 10%;`}
+              >
+                Launching end of the year!
               </Link>
             </Underline>
           </LinksContainer>
