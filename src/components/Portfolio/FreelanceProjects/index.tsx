@@ -109,7 +109,7 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
           <LinksContainer>
             <Underline>
               <Link
-                // href="https://uled.netlify.app/"
+                href="https://uled.io/"
                 target="_blank"
                 borderImage={`linear-gradient(
         to left,
@@ -122,7 +122,7 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
         ${c1}
       ) 1 10%;`}
               >
-                Launching soon!
+                Universal Ledger
               </Link>
             </Underline>
           </LinksContainer>
@@ -142,7 +142,7 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
           <LinksContainer>
             <Underline>
               <Link
-                // href="https://hps.netlify.app/"
+                href="https://hps.netlify.app/"
                 target="_blank"
                 borderImage={`linear-gradient(
         to left,
@@ -155,7 +155,7 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
         ${c1}
       ) 1 10%;`}
               >
-                Launching soon!
+                Hansen Production Studios
               </Link>
             </Underline>
           </LinksContainer>
