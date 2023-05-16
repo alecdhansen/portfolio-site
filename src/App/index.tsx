@@ -21,7 +21,7 @@ import { useDarkMode } from "../hooks/useDarkMode";
 const App = () => {
   const [c1, setC1] = useState(randomColor(appColors, 1));
   const [c2, setC2] = useState(randomColor(appColors, 2));
-  const [focus, setFocus] = useState(1);
+  const [focus, setFocus] = useState<number>(1);
   const [colorTheme, themeToggler, mountedComponent] = useDarkMode();
   const themeMode = colorTheme === "light" ? lightTheme : darkTheme;
   if (!mountedComponent) return <div />;
