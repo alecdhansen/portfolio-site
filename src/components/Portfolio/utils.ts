@@ -31,6 +31,8 @@ export const ULTech = ["React", "TypeScript", "ViteJS"];
 
 export const HPSTech = ["React", "TypeScript", "ViteJS", "EmailJS"];
 
+export const NPMTech = ["React Native", "TypeScript", "Expo", "NPM"];
+
 export const content: Variants = {
   offscreen: {
     x: 100,

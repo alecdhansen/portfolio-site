@@ -87,12 +87,12 @@ const ProjectSideBar: React.FC<Props> = ({ focus, setFocus, c1, c2 }) => {
         ${c1}
       ) 1 10%;`}
             >
-              Braggem
+              NPM Packages
             </Link>
           </Underline>
           <Underline
-            transform={focus === 4 ? "scale(1.4)" : ""}
-            pLeft={focus === 4 ? "27px" : ""}
+            transform={focus === 4 ? "scale(1.3)" : ""}
+            pLeft={focus === 4 ? "37px" : ""}
             mLeft={focus === 4 ? "7px" : ""}
             hPleft={focus === 4 ? "-10px" : "10px"}
           >
@@ -110,17 +110,40 @@ const ProjectSideBar: React.FC<Props> = ({ focus, setFocus, c1, c2 }) => {
         ${c1}
       ) 1 10%;`}
             >
-              Newspaper App
+              Braggem
             </Link>
           </Underline>
           <Underline
-            transform={focus === 5 ? "scale(1.3)" : ""}
+            transform={focus === 5 ? "scale(1.4)" : ""}
             pLeft={focus === 5 ? "27px" : ""}
             mLeft={focus === 5 ? "7px" : ""}
             hPleft={focus === 5 ? "-10px" : "10px"}
           >
             <Link
-              onClick={() => handleFocus(5)}
+              onClick={() => handleFocus(56)}
+              cursor="pointer"
+              borderImage={`linear-gradient(
+        to left,
+        ${c1},
+        ${c2}
+      ) 1 10%;`}
+              hover={`linear-gradient(
+        to left,
+        ${c2},
+        ${c1}
+      ) 1 10%;`}
+            >
+              Newspaper App
+            </Link>
+          </Underline>
+          <Underline
+            transform={focus === 6 ? "scale(1.3)" : ""}
+            pLeft={focus === 6 ? "27px" : ""}
+            mLeft={focus === 6 ? "7px" : ""}
+            hPleft={focus === 6 ? "-10px" : "10px"}
+          >
+            <Link
+              onClick={() => handleFocus(6)}
               cursor="pointer"
               borderImage={`linear-gradient(
         to left,
