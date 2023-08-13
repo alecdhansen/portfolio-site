@@ -27,6 +27,8 @@ export const pixelTech = ["HTML5", "CSS3"];
 
 export const cargillTech = ["React Native", "TypeScript", "Expo"];
 
+export const flikaTech = ["React Native", "TypeScript", "Expo", "Firebase"];
+
 export const ULTech = ["React", "TypeScript", "ViteJS"];
 
 export const HPSTech = ["React", "TypeScript", "ViteJS", "EmailJS"];

@@ -13,7 +13,7 @@ import {
   ProjectContainer,
 } from "../style";
 import { TitleHeader, BlurbContainer } from "../style";
-import { HPSTech, ULTech, cargillTech, content, mobileContent } from "../utils";
+import { HPSTech, ULTech, cargillTech, content, flikaTech, mobileContent } from "../utils";
 import { useState } from "react";
 
 const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
@@ -31,7 +31,6 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
   //   }
   // };
 
-  console.log({ hovered });
   return (
     <Container
       variants={contentVariant}
@@ -49,6 +48,43 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
       ${c2}
     ) 1 100%;`}
       >
+        <ProjectContainer>
+          <ProjectHeader>Flika</ProjectHeader>
+          <BlurbContainer>
+            I'm currently working for{" "}
+            <CompanyTag href="https://purplewrendigital.com/" target="_blank">
+              Purple Wren Digital
+            </CompanyTag>{" "}
+            on Flika. We recently released V1 and I’d love for you to try out the app and let me know what you think! If you’re on an iPhone, you can download it from the link below.
+            Coming soon to the Google Play store!
+          </BlurbContainer>
+          <TechnologiesContainer>
+            {flikaTech.map((tech: string, i: number) => (
+              <TechnologyIcon key={i}>{tech}</TechnologyIcon>
+            ))}
+          </TechnologiesContainer>
+          <LinksContainer>
+            <Underline>
+              <Link
+                href="https://apps.apple.com/us/app/flika-real-estate/id6448050206"
+                target="_blank"
+                borderImage={`linear-gradient(
+        to left,
+        ${c1},
+        ${c2}
+      ) 1 10%;`}
+                hover={`linear-gradient(
+        to left,
+        ${c2},
+        ${c1}
+      ) 1 10%;`}
+              >
+                Flika - Apple App Store
+              </Link>
+            </Underline>
+          </LinksContainer>
+        </ProjectContainer>
+        <div style={{ marginBlock: "50px" }} />
         <ProjectContainer>
           <ProjectHeader onMouseOver={(e) => setHovered(true)}>
             Agricultural Sales Application
@@ -156,43 +192,6 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
       ) 1 10%;`}
               >
                 Hansen Production Studios
-              </Link>
-            </Underline>
-          </LinksContainer>
-        </ProjectContainer>
-        <div style={{ marginBlock: "50px" }} />
-        <ProjectContainer>
-          <ProjectHeader>Real Estate Application</ProjectHeader>
-          <BlurbContainer>
-            I'm currently working as a contractor for{" "}
-            <CompanyTag href="https://purplewrendigital.com/" target="_blank">
-              Purple Wren Digital
-            </CompanyTag>{" "}
-            on a mobile real estate application. I am running design and core
-            build out of Phase 1 of the project.
-          </BlurbContainer>
-          <TechnologiesContainer>
-            {cargillTech.map((tech: string, i: number) => (
-              <TechnologyIcon key={i}>{tech}</TechnologyIcon>
-            ))}
-          </TechnologiesContainer>
-          <LinksContainer>
-            <Underline>
-              <Link
-                // href="https://hps.netlify.app/"
-                target="_blank"
-                borderImage={`linear-gradient(
-        to left,
-        ${c1},
-        ${c2}
-      ) 1 10%;`}
-                hover={`linear-gradient(
-        to left,
-        ${c2},
-        ${c1}
-      ) 1 10%;`}
-              >
-                Launching end of the year!
               </Link>
             </Underline>
           </LinksContainer>
