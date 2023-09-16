@@ -55,8 +55,7 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
             <CompanyTag href="https://purplewrendigital.com/" target="_blank">
               Purple Wren Digital
             </CompanyTag>{" "}
-            on Flika. We recently released V1 and I’d love for you to try out the app and let me know what you think! If you’re on an iPhone, you can download it from the link below.
-            Coming soon to the Google Play store!
+            on Flika. We recently released V1 and I’d love for you to try out the app and let me know what you think!
           </BlurbContainer>
           <TechnologiesContainer>
             {flikaTech.map((tech: string, i: number) => (
@@ -79,7 +78,25 @@ const FreelanceProjects: React.FC<Props> = ({ c1, c2 }) => {
         ${c1}
       ) 1 10%;`}
               >
-                Flika - Apple App Store
+                Apple App Store
+              </Link>
+            </Underline>
+            <Underline>
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.spencerwilkinson.flikah&pli=1"
+                target="_blank"
+                borderImage={`linear-gradient(
+        to left,
+        ${c1},
+        ${c2}
+      ) 1 10%;`}
+                hover={`linear-gradient(
+        to left,
+        ${c2},
+        ${c1}
+      ) 1 10%;`}
+              >
+                Google Play Store
               </Link>
             </Underline>
           </LinksContainer>
