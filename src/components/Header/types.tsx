@@ -2,7 +2,7 @@ import EmailIcon from "../icons/Email";
 import GithubIcon from "../icons/Github";
 import LinkedInIcon from "../icons/LinkedIn";
 import Resume from "../icons/Resume";
-import resume from "../../assets/files/AlecHansenResume.pdf";
+import resume from "../../assets/files/AlecHansen_Oct23.pdf";
 
 export type ImageProps = {
   width?: number;
